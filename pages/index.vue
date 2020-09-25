@@ -1,11 +1,17 @@
 <template>
   <section class="container">
-    <p>hellow world</p>
+    <p>{{ message }}</p>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data: function () {
+    return {
+      message: "hellow",
+    };
+  },
+};
 </script>
 
 <style>
