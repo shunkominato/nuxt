@@ -1,6 +1,8 @@
 <template>
   <section class="container">
     <p>{{ message }}</p>
+    <hr />
+    <router-link to="/price">price page</router-link>
   </section>
 </template>
 
