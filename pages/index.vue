@@ -2,7 +2,12 @@
   <section class="container">
     <hr />
     <router-link to="/price">price page</router-link>
-    <div>{{ users[0].id }},{{ users[0].name }}</div>
+    <!-- <div>{{ users[0].id }},{{ users[0].name }}</div> -->
+    <ul>
+      <li v-for="user in users" :key="user.id">
+        {{ user.id }}, {{ user.name }}, {{ user.company.name }}
+      </li>
+    </ul>
   </section>
 </template>
 
