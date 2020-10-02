@@ -8,7 +8,8 @@
         {{ user.id }}, {{ user.name }}, {{ user.company.name }}
       </li>
     </ul>
-    <img src="../assets/9月.png" />
+    <!-- <img src="../assets/9月.png" /> -->
+    <p>{{ $store.state.message }}</p>
   </section>
 </template>
 
