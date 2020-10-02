@@ -10,6 +10,7 @@
     </ul>
     <!-- <img src="../assets/9月.png" /> -->
     <p>{{ $store.state.message }}</p>
+    <button @click="$store.commit('updateMessage')">dsa</button>
   </section>
 </template>
 

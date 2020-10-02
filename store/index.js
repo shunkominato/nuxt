@@ -6,6 +6,12 @@ const createStore = () => {
       return {
         message: "hell"
       };
+    },
+
+    mutations: {
+      updateMessage: function(state) {
+        state.message = "aaaa";
+      }
     }
   });
 };
