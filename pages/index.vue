@@ -8,6 +8,7 @@
         {{ user.id }}, {{ user.name }}, {{ user.company.name }}
       </li>
     </ul>
+    <img src="../assets/9月.png" />
   </section>
 </template>
 
@@ -15,11 +16,17 @@
 const axios = require("axios");
 const url = "https://jsonplaceholder.typicode.com/users";
 export default {
-  asyncData({ params }) {
+  asyncData({ params, error }) {
     console.log("ads");
-    return axios.get(url).then((res) => {
-      return { users: res.data };
-    });
+    return axios
+      .get(url)
+      .then((res) => {
+        return { users: res.data };
+      })
+      .catch((e) => {
+        // console.log(e);
+        error({ users: e.response.status, message: e.message });
+      });
   },
 };
 </script>
