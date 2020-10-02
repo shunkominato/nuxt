@@ -9,8 +9,9 @@ const createStore = () => {
     },
 
     mutations: {
-      updateMessage: function(state) {
-        state.message = "aaaa";
+      updateMessage: function(state, payload) {
+        console.dir(state);
+        state.message = payload;
       }
     }
   });
