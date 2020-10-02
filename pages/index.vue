@@ -11,7 +11,10 @@
     <!-- <img src="../assets/9月.png" /> -->
     <p>{{ $store.state.message }}</p>
     <!-- <button @click="$store.commit('updateMessage')">dsa</button> -->
-    <button @click="$store.commit('updateMessage', 'ffffff')">dsa</button>
+    <button @click="$store.dispatch('updateMessageAction', 'adffff')">
+      dsa
+    </button>
+    <button @click="aaa()">ggg</button>
   </section>
 </template>
 
@@ -30,6 +33,11 @@ export default {
         // console.log(e);
         error({ users: e.response.status, message: e.message });
       });
+  },
+  methods: {
+    aaa() {
+      console.log($store.state.message);
+    },
   },
 };
 </script>

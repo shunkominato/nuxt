@@ -13,6 +13,15 @@ const createStore = () => {
         console.dir(state);
         state.message = payload;
       }
+    },
+
+    actions: {
+      updateMessageAction(context, payload) {
+        console.log("-----------------");
+        console.log(context);
+        console.log("-----------------");
+        context.commit("updateMessage", payload);
+      }
     }
   });
 };
