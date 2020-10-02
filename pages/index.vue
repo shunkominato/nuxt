@@ -9,9 +9,9 @@
       </li>
     </ul>
     <!-- <img src="../assets/9月.png" /> -->
-    <p>{{ $store.state.message }}</p>
+    <p>{{ $store.state.hello.messege }}</p>
     <!-- <button @click="$store.commit('updateMessage')">dsa</button> -->
-    <button @click="$store.dispatch('updateMessageAction', 'adffff')">
+    <button @click="$store.dispatch('hello/updateMessageAction', 'adffff')">
       dsa
     </button>
     <button @click="aaa()">ggg</button>
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     aaa() {
-      console.log($store.state.message);
+      console.log(vue.$store);
     },
   },
 };
